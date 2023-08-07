@@ -1,5 +1,6 @@
 import React, {useReducer, useState,useEffect} from "react"
 import IndividualTodo from "./IndividualTodo"
+import "./TodoList.css"
 import { Button,Container } from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -92,7 +93,7 @@ const TodoList = () => {
             {editTodoId ? "EDIT" : "SUBMIT"}
         </Button>
         </Container>
-        <Container style ={{height: "500px", width:"400px"}} className="d-flex flex-wrap justify-content-center align-content-center">
+        <Container style ={{height: "500px", width:"600px"}} className="d-flex flex-wrap justify-content-center align-content-center">
         {todoArray && todoArray.map((t) => {
           return <IndividualTodo 
             key={t.id}
